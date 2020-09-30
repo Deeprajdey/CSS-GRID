@@ -1,0 +1,45 @@
+.footer {
+    background-color: $color-secondary;
+    grid-column: full-grid-start/full-grid-end;
+
+    padding: 5rem;
+
+    &__Box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        list-style: none;
+        text-align: center;
+        grid-gap: 5rem;
+
+
+
+        li {
+            font-size: 1.8rem;
+            color: $color-grey-light-1;
+            cursor: pointer;
+            padding: 1.3rem;
+            background-color: inherit;
+            transition: all 0.8s;
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -ms-transition: all 0.8s;
+            -o-transition: all 0.8s;
+
+            &:hover {
+                background-color: rgba($color-grey-light-1, .5);
+                // background-color: orangered;
+            }
+
+
+        }
+
+
+    }
+
+    &__legal {
+        width: 40%;
+        margin: 5rem auto;
+        font-size: 1.4rem;
+        color: $color-grey-light-1;
+    }
+}

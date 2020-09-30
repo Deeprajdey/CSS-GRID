@@ -1,0 +1,72 @@
+ %heading {
+     font-family: $font-display;
+     font-weight: 400;
+ }
+
+ .heading-1 {
+     @extend %heading;
+     font-size: 6rem;
+     color: $color-grey-light-1;
+
+     @media only screen and (max-width:43.75em) {
+         font-size: 4rem;
+     }
+
+ }
+
+ .heading-2 {
+     @extend %heading;
+     font-size: 4rem;
+     font-style: italic;
+     line-height: 1;
+
+     @media only screen and (max-width:62.5em) {
+         font-size: 3rem;
+     }
+
+     &--dark {
+         color: $color-grey-dark-1
+     }
+
+     &--light {
+         color: $color-grey-light-1
+     }
+ }
+
+ .heading-3 {
+     @extend %heading;
+     font-size: 1.6rem;
+     text-transform: uppercase;
+
+ }
+
+ .heading-4 {
+     @extend %heading;
+     font-size: 1.6rem;
+     font-weight: 600;
+
+     &--light {
+         color: $color-grey-light-1;
+     }
+
+     &--dark {
+         color: rgb(84, 72, 58);
+
+     }
+ }
+
+ .mb-s {
+     margin-bottom: 2rem;
+ }
+
+ .mb-m {
+     margin-bottom: 3rem;
+ }
+
+ .mb-l {
+     margin-bottom: 4rem;
+ }
+
+ .mb-el {
+     margin-bottom: 8rem;
+ }

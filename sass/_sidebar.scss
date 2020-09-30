@@ -1,0 +1,41 @@
+.sidebar {
+    background-color: $color-primary;
+    grid-column: sidebar-start/sidebar-end;
+    grid-row: 1/-1;
+
+    @media only screen and (max-width:56.25em) {
+
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+
+    &__link {
+        height: 2px;
+        width: 4.5rem;
+        background-color: $color-grey-light-1;
+        margin-left: .5rem;
+        border: 0;
+        margin-top: 1rem;
+
+        &::after,
+        &::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: $color-grey-light-1;
+            display: inline-block;
+        }
+
+        &::before {
+            transform: translateY(.3rem);
+            -webkit-transform: translateY(.3rem);
+            -moz-transform: translateY(.3rem);
+            -ms-transform: translateY(.3rem);
+            -o-transform: translateY(.3rem);
+        }
+
+        @media only screen and (max-width:56.25em) {
+            margin-top: 1rem;
+        }
+    }
+}

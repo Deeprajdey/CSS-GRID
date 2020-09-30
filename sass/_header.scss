@@ -1,0 +1,63 @@
+.header {
+    background-color: $color-grey-light-2;
+    grid-column: full-grid-start/col-end 6;
+    background-image: linear-gradient(rgba($color-secondary, .9), rgba($color-secondary, .9)), url(../img/hero.jpeg);
+    display: grid;
+    padding: 6.5rem;
+    grid-template-columns: minmax(-webkit-min-content, -webkit-max-content);
+    grid-template-columns: minmax(min-content, max-content);
+    grid-template-rows: 1fr -webkit-min-content minmax(6rem, 1fr) 6rem repeat(1, 1fr) 1fr;
+    grid-template-rows: 1fr min-content minmax(6rem, 1fr) 6rem repeat(1, 1fr) 1fr;
+    justify-content: center;
+    gap: 3rem;
+
+    @media only screen and (max-width:43.75em) {
+        grid-column: 1/-1;
+    }
+
+    &__logoBox {
+        justify-self: center;
+
+        &--logo {
+            height: 3rem;
+        }
+    }
+
+    &__imgBox {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-self: start;
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    &__img {
+        max-height: 2.5rem;
+        max-width: 100%;
+        -webkit-filter: brightness(70%);
+        filter: brightness(70%);
+    }
+
+    p {
+        font-size: 1.3rem;
+        color: $color-grey-light-1;
+        display: grid;
+        grid-template-columns: 1fr -webkit-max-content 1fr;
+        grid-template-columns: 1fr max-content 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 1rem;
+        align-self: end;
+
+        &::after,
+        &::before {
+            content: "";
+            height: 1px;
+            display: block;
+            width: 100%;
+            background-color: $color-grey-light-1;
+
+        }
+
+    }
+}
